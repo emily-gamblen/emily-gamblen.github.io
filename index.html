@@ -1,7 +1,382 @@
 <!DOCTYPE html>
+<head>
+    <style>
+        header {
+            font-family: Courier, monospace;
+        }
+        body {
+            font-family: Courier, monospace;
+            background-color: black
+        }
+        img {
+            /*max-width: 100%;*/
+            border-radius: 50%;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+            color: rgba(201, 69, 172);
+        }
+        .myName {
+            position: relative;
+            /*top: 8px;
+            left: 16px;*/
+            text-align: center;
+            font-size: 150%;
+            color: rgb(245, 12, 194);
+        }
+        .myPosition{
+            position: relative;
+            /*top: 64px;
+            left: 0px;*/
+            font-size: 80%;
+            text-align: center;
+            color:aliceblue;
+        }
+        .caption{
+            position: absolute;
+            bottom: -32px
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            
+        }
+
+        /* Create two equal columns that sits next to each other */
+        .column {
+            flex: 50%;
+            padding: 10px;
+            display: table-cell;
+            vertical-align: middle;
+            color: white;
+        }
+
+        .column2 {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            color: white;
+            background-color: #242424;
+        }
+
+        .detailBar{
+            background-color: #242424;
+            color: white;
+            font-size: 100%;
+            margin-top: 10px;
+            margin-bottom: -4px;
+            text-align: center;
+            border-width: 0px;
+        }
+        a:link {
+            color: rgb(245, 12, 194);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: rgb(201, 69, 172);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: rgb(201, 69, 172) ;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        .vertical-center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .tab {
+            margin-left: 40px;
+        }
+    </style>
+</head>
 <html>
-<body>
-<h1>Hello world</h1>
-<p>this is my little page</p>
-</body>
+    <a name="Top" id="Top"></a>
+    <h1>
+        <div class="myName">
+            Emily Gamblen
+        </div>
+        <center><img src="images/pic.jpg" alt="Emily" height="120"></center>
+        <div class="myPosition">
+            <a href= "https://www.research.lancs.ac.uk/portal/en/people/emily-gamblen(d4ed04a1-8ab2-431a-8618-09c7f39ec5d0).html"
+            target="blank">
+            PhD Student</a> at Lancaster University with <a href="https://www.graphene-nownano.manchester.ac.uk/" target="blank
+            ">NowNano CDT</a>
+            <br>
+            Supervisor: <a href="https://www.research.lancs.ac.uk/portal/en/people/jonathan-prance(1f2a1402-6513-414e-b685-391d56cdd0fe).html" target="blank">Jonathan Prance</a>
+        </div>
+    </h1>
+    <body>
+        <div class="detailBar">
+            <div class="column2">
+                <p>Welcome to my website!
+                </p>
+            </div>
+            <div class="column2">
+                <p>It's a work in progress</p>
+            </div>
+        </div>
+    </body>
+    <!-- <header>
+        <div class="container">
+                <img src="images/websiteHeader_221125_1540_500mV_32x9.png" alt="Image of defects" style="opacity:0.8">
+                <div class="myName" style="color:rgb(245, 12, 194)">
+                    <strong><center>Emily Gamblen</center></strong>
+                </div>
+                <div class="myPosition" style="color:#ffffff">
+                    <strong>PhD Student at Lancaster University with <a href="https://www.graphene-nownano.manchester.ac.uk/">NowNano CDT</a></strong>
+                    <br>Supervisor: <a href="https://www.research.lancs.ac.uk/portal/en/people/jonathan-prance(1f2a1402-6513-414e-b685-391d56cdd0fe).html">Jonathan Prance</a>
+                </div>
+        </div>
+    </header> -->
+    <!--
+    <body>
+        <div class="detailBar">
+            <div class="row" style="background-color:black">
+                <div class="column">
+                    <p style="font-size:120%"><a href="#Experiment">Experiment</a></p>
+                </div>
+                <div class="column">
+                    <p style="font-size:120%"><a href="#Simulation">Simulation</a></p>
+                </div>
+                <div class="column">
+                    <p style="font-size:120%"><a href="#Activity">Activity</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p><b><br></b></p>
+                    <p>Staff Directory:</p>
+                    <p>Email:</p>
+                </div>
+                <div class="column">
+                    <p><b>Emily Gamblen</b></p>
+                    <p><a href="https://www.research.lancs.ac.uk/portal/en/people/edward-dunn(d9b0b826-7594-4a2e-a01b-167af2ef4101).html">My Profile</a></p>
+                    <p>e.gamblen1@lancaster.ac.uk</p>
+                </div>
+                <div class="column">
+                    <p><b>Supervisor:</b></p>
+                    <p><a href="https://www.research.lancs.ac.uk/portal/en/people/samuel-jarvis(c5f0c2b1-aa69-40e1-badc-b74e5fe9ea3a).html">Sam Jarvis</a></p>
+                    <p>samuel.jarvis@lancaster.ac.uk</p>
+                </div>
+                <div class="column">
+                    <p><b>Co-Supervisor:</b></p>
+                    <p><p><a href="https://www.research.lancs.ac.uk/portal/en/people/robert-young(c62e8e6f-7ab8-4743-af62-9c4af86f72d7).html">Rob Young</a></p>
+                    <p>r.j.young@lancaster.ac.uk</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <h1>PhD Outline</h1>
+                    <p>
+                        In Physics, crystals are considered as a repeating pattern of atoms. This periodicity leads to many symmetries which have a key role in the properties of a material. However, in reality, the pattern is rarely perfect and these deviations, called defects, lead to strong localized changes in a material's properties.
+                    </p>
+                    <p>
+                        I am interested in observing atomic defects in 2D materials in high resolution and relating these defects to variations on a scale that could be measured optically. In my work, I acquire cAFM images and low temperature photoluminescence spectra in the Isolab facility; built to isolate experiments from mechanical vibrations, electromagnetic radiation and electrical noise.
+                    </p>
+            </div>
+            <div class="column">
+                <img src="images/ED_1.png" alt="Edward at a conference">
+            </div>
+        </div>
+        <a name="Experiment" id="Experiment"></a>
+        <div class="row">
+            <div class="column">
+                <img src="images/02171640.0_00001_EMRS_noProf.png" alt="A type 1, depleting defect">
+            </div>
+            <div class="column">
+                <h1>cAFM</h1>
+                <p>
+                    The characterization of defects with Scanning Tunnelling Microscopy (STM) has granted researchers insights into their electrical properties on the atomic scale.  cAFM (conductive Atomic Force Microscopy) complements STM by providing atomic resolution images in an ambient environment.
+                </p>
+                <p>
+                    If the nature of a defect could be ascertained from cAFM images, the density of a chosen defect could be surveyed trivially.  As a result, I am working to characterize defects in Transition Metal Dichalcogenides via cAFM, so that I can correlate their density with changes in photoluminescence.
+                </p>
+                <div class="tab">
+                    <b><a href="#cAFM_Blender_1" style="color:black">Watch an animation of cAFM here!</a></b>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <h1>Photoluminescence</h1>
+                <p>
+                    When a semiconductor is illuminated by photons with sufficent energy, electrons are excited across the band gap and then spontaneously relax, releasing a photon.  Before falling back to the conduction band, the electron loses energy until it lies directly above the bandgap, meaning that the energy of the emitted photon will reflect the size of the band gap.
+                </p>
+                <p>
+                    The band gap of a semiconductor can vary due to defects or excitons.  As the population of excitons can be modified with defects in TMDs, the density of defects can be correlated with changes in photoluminescence.
+                </p>
+                <p>
+                    Our Photoluminescence measurements are carried out at cryogenic temperatures as low as 10K.  Measuring at low temperatures increases the resolution in energy and allows for differentiation between the peaks contributing to a photoluminescence signal.
+                </p>
+            </div>
+            <div class="column">
+                <img src="images/Centre_eV.png" alt="Photoluminescence Maps">
+            </div>
+        </div>
+        <a name="Simulation" id="Simulation"></a>
+        <div class="row">
+            <div class="column">
+                <img src="images/ZnTPP_250pN.png" alt="A constant force simulation of ZnTPP on Au<111>">
+            </div>
+            <div class="column">
+                <h1>Simulation of Constant Force AFM</h1>
+                <p>
+                    The assembly of planar molecules on surfaces has been revealed in great detail by Non-Contact AFM (NC-AFM).  As the tip is oscillated at a constant height, the signal is exceptionally clear for atoms a particular distance below.  As non-planar molecules contain atoms at many different heights above the surface, it is difficult to interpret images of them taken using a constant height technique.
+                </p>
+                <p>
+                    Constant force AFM methods are used routinely in the ambient environment and can resolve individual molecules.  By simulating contsant force AFM we can begin to interpret these images.
+                </p>
+                <p>
+                    The realization of a constant force technique in the vacuum environment would shed light onto non-planar molecules as a good signal could be maintained for atoms at multiple heights.  However, there are substantial challenges to overcome in modifying the technique for a vacuum environment.  By simulating idealized constant force images we show the value in developing such a technique and offer a method of interpreting any features that are observed.
+                </p>
+            </div>
+        </div>
+        <p align="right">
+            <a href="#Top"  style="color:black">
+                Back to top
+            </a>
+        </p>
+        <a name="Activity" id="Activity"></a>
+        <h1>Activity</h1>
+            <h2>Upcoming Conferences</h2>
+                <p>
+                    <b>17th-19th April: ISSC (Manchester)</b>
+                </p>
+                <p>
+                    <div class="tab">
+                        <a href="https://www.iop.org/events/interdisciplinary-surface-science-conference#gref" style="color:black">
+                            Oral Presentation
+                        </a>
+                        - "Identifying point defects in transition metal dichalcogenides with 'true' atomic resolution"  
+                    </div>
+                </p>
+            <h2>International Conferences</h2>
+                <p>
+                    <b>ECOSS 35 (Luxembourg)</b>
+                </p>
+                <p>
+                    <div class="tab">
+                        <a href="https://express.converia.de/frontend/index.php?page_id=14119&v=List&do=15&day=4218&ses=22729#" style="color:black">
+                            Oral Presentation
+                        </a>
+                        - "Atomic defects in TMDs: revealing electronic and chemical structure with conductive microscopy"  
+                    </div>
+                </p>
+                <p>
+                    <b>CMD 29 (Manchester)</b>
+                </p>
+                <p>
+                    <div class="tab">
+                        <a href="images/CMD_Oral_Presentations.pdf" style="color:black">
+                            Oral Presentation
+                        </a>
+                        - "Correlating the electronic and chemical structure of defects in TMDs with atomic resolution conductive microscopy"
+                    </div>
+                </p>
+                <p>
+                    <div class="tab">
+                        <a href="images/CMD_Oral_Presentations.pdf" style="color:black">
+                            Oral Presentation
+                        </a>
+                        - "Simulated imaging of submolecular structure in molecules with high topographic variation"
+                    </div>
+                </p>
+                <p>
+                    <b>E-MRS 2022 Spring Meeting (Online)</b>
+                </p>
+                <p>
+                    <div class="tab">
+                        <a href="https://www.european-mrs.com/semiconductor-nanostructures-towards-opto-electronic-and-photonic-device-applications-%E2%80%93-viii-emrs" style="color:black">
+                            Oral Presentation
+                        </a>
+                        - "Probing TMD defects with atomic scale probe microscopy"
+                        <div class="tab">
+                            <b><a href="#EMRS-video" style="color:black">Watch talk here!</a></b>
+                        </div>
+                    </div>
+                </p>
+            <h2>Other Activity</h2>
+                <p>
+                    <b>National Graphene Institute Seminar 02/12/22</b>
+                </p>
+                <p>
+                    <div class="tab">
+                        Presentation - "Atomic Scale Defect Characterisation in Ambient Conditions"
+                    </div>
+                </p>
+                <p>
+                    <b>Molecular Electronics Seminar 10/11/22</b>
+                </p>
+                <p>
+                    <div class="tab">
+                        Presentation - "Simulated imaging of submolecular structure in molecules with high topographic variation"
+                    </div>
+                </p>
+                <p>
+                    <b>NowNano CDT Friday Seminar 28/10/22</b>
+                </p>
+                <p>
+                    <div class="tab">
+                        Presentation - "Simulated imaging of submolecular structure in molecules with high topographic variation"
+                    </div>
+                </p>
+                <p>
+                    <b>NowNano CDT Conference 2022</b>
+                </p>
+                <p>
+                    <div class="tab">
+                        <a href="images/CDT Conference Program 2022.pdf" style="color:black">
+                            Oral Presentation
+                        </a>
+                        - "Probing TMD defects with atomic scale probe microscopy"
+
+                    </div>
+                </p>
+                <p>
+                    <div class="tab">
+                       Session Chair - "Fabrication and Characterization"
+                    </div>
+                </p>
+                <p>
+                    <b>National Graphene Institute Seminar 02/07/21</b>
+                </p>
+                <p>
+                    <div class="tab">
+                        Presentation - "Probing TMD defects with atomic scale probe microscopy"
+                    </div>
+                </p>
+                <p align="right">
+                    <a href="#Top"  style="color:black">
+                        Back to top
+                    </a>
+                </p>
+            <h2>Media</h2>
+                <iframe width="960" height="540"
+                src="https://www.youtube.com/embed/wwqTw6B2dlc" id="cAFM_Blender_1">
+                </iframe>
+                <p align="right">
+                    <a href="#Top"  style="color:black">
+                        Back to top
+                    </a>
+                </p>
+                <iframe width="960" height="540"
+                    src="https://www.youtube.com/embed/KCSqB7sn15k" id="EMRS-video">
+                </iframe>
+                <p align="right">
+                    <a href="#Top"  style="color:black">
+                        Back to top
+                    </a>
+                </p>
+    </body> -->
 </html>
